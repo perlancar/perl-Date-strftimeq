@@ -105,4 +105,6 @@ Usage:
 
 L<POSIX>'s C<strftime()>
 
+L<DateTimeX::strftimeq>
+
 =cut
