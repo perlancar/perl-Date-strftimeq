@@ -78,9 +78,9 @@ sub strftimeq {
  use Date::strftimeq; # by default exports strftimeq()
 
  my @time = localtime();
- print strftimeq '<%Y-%m-%d>', @time; # <2019-11-19>
- print strftimeq '<%Y-%m-%d%( require Date::DayOfWeek; Date::DayOfWeek::dayofweek($_[3], $_[4]+1, $_[5]+1900) == 0 ? "sun":"" )q>', @time; # <2019-11-19>
- print strftimeq '<%Y-%m-%d%( require Date::DayOfWeek; Date::DayOfWeek::dayofweek($_[3], $_[4]+1, $_[5]+1900) == 2 ? "tue":"" )q>', @time; # <2019-11-19tue>
+ print strftimeq '<%-6Y-%m-%d>', @time; # <  2019-11-19>
+ print strftimeq '<%-6Y-%m-%d%( require Date::DayOfWeek; Date::DayOfWeek::dayofweek($_[3], $_[4]+1, $_[5]+1900) == 0 ? "sun":"" )q>', @time; # <  2019-11-19>
+ print strftimeq '<%-6Y-%m-%d%( require Date::DayOfWeek; Date::DayOfWeek::dayofweek($_[3], $_[4]+1, $_[5]+1900) == 2 ? "tue":"" )q>', @time; # <  2019-11-19tue>
 
 
 =head1 DESCRIPTION
